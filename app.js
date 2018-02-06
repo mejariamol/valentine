@@ -9,8 +9,6 @@ var mongoose = require('mongoose')
 var config = require('./config/database')
 var methodOverride = require('method-override')
 
-process.env.NODE_ENV = 'production';
-
 var index = require('./routes/index');
 
 mongoose.connect(config.database)
