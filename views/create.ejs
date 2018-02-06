@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LoveYouPats | Online Greeting | Valentine Special</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href='/stylesheets/create.css' />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="/javascripts/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+<div class="preview">
+  <div class="photu">
+    <img src="/images/bg13.jpg" />
+  </div>
+
+  <div class="label">
+    <p>Dear <span em-bind="to_first_name"><%= to_first_name %></span> <span em-bind="to_last_name"><%= to_last_name %></span></p><br>
+    <p><span em-bind="message"><%= message %></span></p><br>
+    <p>yours</p>
+    <p><span em-bind="from_first_name"><%= from_first_name %></span> <span em-bind="from_last_name"><%= from_last_name %></span></p>
+  </div>
+
+  <div class="footer">
+    <p style="font-size: 1.2em;">&copy;LoveYouPats 2018</p>
+  </div>
+</div>
+
+<div class="form" id="greetingForm">
+  <form id="creator">
+    <label for="toFirstName">* Enter your partner's name here:</label>
+    <input id="toFirstName" type="text" em-model="to_first_name" value="<%= to_first_name %>"/><br>
+    <input id="toLastName" type="text" em-model="to_last_name" value="<%= to_last_name %>"/><br>
+
+    <label for="message">* Enter your message here:</label>
+    <input id="message" type="text" maxlength="150" em-model="message" value="<%= message %>"/><br>
+    
+    <label for="fromFirstName">* Enter your name here:</label>
+    <input id="fromFirstName" type="text" em-model="from_first_name" value="<%= from_first_name%>"/><br>
+    <input id="fromLastName" type="text" em-model="from_last_name" value="<%= from_last_name %>"/><br>
+
+    <button class="btn" id="btnSubmit">Create your Greeting</button>
+  </form>
+
+  <div id="result" style="display:none;">
+    <input id="result-url" type="text" style="margin-bottom: 1em;" value="http://loveyoupats.com/5a79ba701006a646e8c3d39c" readonly/>
+    <button class="btn" id="btnCopy">Copy the Greeting URL</button>
+    <button class="btn" id="btnView">View Greeting</button>
+  </div>
+
+</div>
+
+<script src="/javascripts/bind.js"></script>
+<script src="/javascripts/create.js"></script>
+</body>
+</html>

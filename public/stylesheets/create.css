@@ -1,0 +1,95 @@
+.preview{
+    position: fixed;
+    height: 100%;
+    width: 70%;
+    left: 0;
+    padding: 1em;
+}
+
+.form{
+    position: fixed;
+    height: 100%;
+    width: 30%;
+    right: 0;
+    background: #cc0000;
+    overflow: auto;
+}
+
+form{
+    position: relative;
+    top: 10%;
+}
+
+#result{
+    position: relative;
+    top: 20%;
+}
+
+label{
+    width: 60%;
+    display: table;
+    margin: auto;
+    margin-bottom: 0.5em;
+}
+
+input {
+    width: 60%;
+    display: table;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 2em;
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 1em;
+    transition: all .2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    padding: 0.5em 1em 0.5em 1em;
+    margin: auto;
+}
+
+input:hover, input:focus {
+    color: #fff;
+    border: 1px solid #fff;
+    transition: all .2s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+button.btn {
+    display: table;
+    color: #cc0000;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 2em;
+    font-size: 1.5em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+button.btn:hover {
+    background: #fff;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+button.btn:active {
+    transform: scale(0.96);
+}
+
+@media only screen and (max-width: 768px) {
+  
+  .preview{
+      display: none;
+  }
+
+  .form{
+      width: 100%;
+  }
+
+  form{
+      top: 5%;
+  }
+  
+}
