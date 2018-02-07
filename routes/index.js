@@ -114,10 +114,10 @@ router.get('/', (req, res, next) => {
 
   res.render('create', {
     to_first_name: "Juliet",
-    to_last_name: "Kaur",
+    to_last_name: "",
     from_first_name: "Romeo",
-    from_last_name: "Kapoor",
-    message: "I've fallen in love many times...Always with you. Happy " + dayName + " Day!"
+    from_last_name: "",
+    message: "No poems no fancy words I just want the world to know that I love you my Princess with all my heart. Happy " + dayName + " Day!"
   })
 })
 
@@ -134,6 +134,10 @@ router.get('/:_id', (req, res, next) => {
       message: greeting.message
     })
   })
+})
+
+router.get('/poster/howto', (req, res, next) => {
+  res.render('poster')
 })
 
 module.exports = router;
