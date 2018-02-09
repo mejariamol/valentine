@@ -10,6 +10,8 @@ var config = require('./config/database')
 var methodOverride = require('method-override')
 
 var index = require('./routes/index');
+var greetings = require('./routes/greetings')
+var feedbacks = require('./routes/feedbacks')
 
 mongoose.connect(config.database)
 
@@ -37,6 +39,8 @@ app.use(methodOverride())
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/api/greetings', greetings);
+app.use('/api/feedbacks', feedbacks);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

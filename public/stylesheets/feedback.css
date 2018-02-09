@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'indie_flowerregular';
+    src: url('indieflower-webfont.woff2') format('woff2'),
+         url('indieflower-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;box-sizing:border-box;}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+li{list-style:none}
+
+
+/* Rating Star */
+
+.rating-stars ul {
+  list-style-type:none;
+  padding:0;
+  
+  -moz-user-select:none;
+  -webkit-user-select:none;
+}
+.rating-stars ul > li.star {
+  display:inline-block;
+  
+}
+
+/* Idle State of the stars */
+.rating-stars ul > li.star > i.fa {
+  font-size:2.5em; /* Change the size of the stars */
+  color:#ccc; /* Color on idle state */
+}
+
+/* Selected state of the stars */
+.rating-stars ul > li.star.selected > i.fa {
+  color:#cc0000;
+}
+
+
+/* Others */
+
+*{
+  outline: none;
+  font-family: 'indie_flowerregular', cursive;
+}
+
+#container{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #cc0000
+}
+
+#footer{
+  position: absolute;
+  bottom: 1em;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+#feedback{
+  position: absolute;
+  background-color: #fff;
+  width: 500px;
+  left: 50%;
+  top: 10%;
+  text-align: center;
+  margin-left: -250px;
+  padding: 1em;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+}
+
+.label{
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+button.btn {
+    display: table;
+    color: #fff;
+    background: #cc0000;
+    border: 1px solid #cc0000;
+    border-radius: 2em;
+    font-size: 1.5em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+button.btn:hover {
+    background: #cc0000;
+    box-shadow: 0 5px 12px rgba(204, 0, 0, 0.2);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+button.btn:active {
+    transform: scale(0.96);
+}
+
+input {
+    width: 60%;
+    display: table;
+    background: transparent;
+    color: rgba(204, 0, 0, 0.6);
+    border: 1px solid rgba(204, 0, 0, 0.6);
+    border-radius: 2em;
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 1em;
+    transition: all .2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    padding: 0.5em 1em 0.5em 1em;
+    margin: auto;
+}
+
+input:hover, input:focus {
+    color: #cc0000;
+    border: 1px solid #cc0000;
+    transition: all .2s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@media only screen and (max-width: 768px) {
+    #feedback{
+        width: 100%;
+        margin: 0;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+
+    #content{
+        margin-top: 20%;
+    }
+
+    #footer{
+        color: #cc0000;
+    }
+}

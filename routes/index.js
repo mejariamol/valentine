@@ -3,106 +3,6 @@ var router = express.Router();
 
 var Greeting = require('../models/greeting')
 
-/* API */
-
-router.get('/api', (req, res, next) => {
-  res.send('<i>Hello! Thanks for visiting.</i>')
-})
-
-router.get('/api/greetings', (req, res, next) => {
-  Greeting.find((err, greetings) => {
-    if (err)
-      return res.status(500).send({
-        success: false,
-        error: err.message
-      })
-    
-    res.send({
-      success: true,
-      data: greetings
-    })
-  })
-})
-
-router.get('/api/greetings/:_id', (req, res, next) => {
-  Greeting.findById(req.params._id, (err, greeting) => {
-    if (err | !greeting)
-      return res.status(404).send({
-        success: false,
-        error: 'The greeting not found.'
-      })
-    
-    res.send({
-      success: true,
-      data: greeting
-    })
-  })
-})
-
-router.post('/api/greetings', (req, res, next) => {
-  Greeting.create({
-    to_first_name: req.body.to_first_name,
-    to_last_name: req.body.to_last_name,
-    from_first_name: req.body.from_first_name,
-    from_last_name: req.body.from_last_name,
-    message: req.body.message
-  }, (err, greeting) => {
-    if (err)
-      return res.status(500).send({
-        success: false,
-        error: err.message
-      })
-    
-    res.send({
-      success: true,
-      data: greeting
-    })
-  })
-})
-
-/*
-router.patch('/api/greetings/:_id', (req, res, next) => {
-  Greeting.findById(req.params._id, (err, greeting) => {
-    if (err | !greeting)
-      return res.status(404).send({
-        success: false,
-        error: 'The greeting is not found.'
-      })
-
-    greeting.payment_token = req.body.payment_token
-    greeting.paid = true
-
-    greeting.save((err) => {
-      if (err)
-        return res.status(500).send({
-          success: false,
-          error: 'The greeting could be not be updated. Please try again.'
-        })
-      
-      res.send({
-        success: true,
-        data: greeting
-      })
-    })
-  })
-})
-*/
-
-router.delete('/api/greetings/:_id', (req, res, next) => {
-  Greeting.findByIdAndRemove(req.params._id, (err, greeting) => {
-    if (err | !greeting)
-      return res.status(404).send({
-        success: false,
-        error: 'The greeting not found.'
-      })
-    
-    res.send({
-      success: true,
-      data: greeting
-    })
-  })
-})
-
 /* Front End */
 
 router.get('/', (req, res, next) => {
@@ -117,7 +17,7 @@ router.get('/', (req, res, next) => {
     to_last_name: "",
     from_first_name: "Romeo",
     from_last_name: "",
-    message: "No poems no fancy words I just want the world to know that I love you my Princess with all my heart. Happy " + dayName + " Day!"
+    message: "Life is like a Chocolate Box. Each chocolate is like a portion of life. Some are crunchy, some are nutty, some are soft, but all are delicious. Happy Chocolate Day!"
   })
 })
 
@@ -138,6 +38,10 @@ router.get('/:_id', (req, res, next) => {
 
 router.get('/poster/howto', (req, res, next) => {
   res.render('poster')
+})
+
+router.get('/contact-us/feedback', (req, res, next) => {
+  res.render('feedback')
 })
 
 module.exports = router;

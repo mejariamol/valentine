@@ -32,10 +32,6 @@ label{
     margin-bottom: 0.5em;
 }
 
-.label{
-    left: 5%;
-}
-
 input {
     width: 60%;
     display: table;

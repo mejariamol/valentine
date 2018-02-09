@@ -45,3 +45,9 @@ $('#btnView').click((e) => {
 
     window.location.replace($('#result-url').val())
 })
+
+$('#btnFeedback').click((e) => {
+    e.preventDefault()
+
+    window.open('http://loveyoupats.com/contact-us/feedback', '_blank')
+})

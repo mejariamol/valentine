@@ -1,4 +1,12 @@
 @font-face {
+    font-family: 'poiret_oneregular';
+    src: url('poiretone-regular-webfont.woff2') format('woff2'),
+         url('poiretone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'dancing_scriptregular';
     src: url('dancingscript-regular-webfont.woff2') format('woff2'),
          url('dancingscript-regular-webfont.woff') format('woff');
@@ -55,18 +63,18 @@ html{
 }
 
 p{
-  font-family: 'dancing_scriptregular', cursive;
+  font-family: 'poiret_oneregular', cursive;
   font-size: 3.5em;
   color: #cc0000;
   font-weight: bold;
 }
 
 span{
-  font-family: 'dancing_scriptregular', cursive;
+  font-family: 'poiret_oneregular', cursive;
 }
 
 img{
-  height: 20em;
+  height: 5em;
 }
 
 .greeting{
@@ -78,23 +86,24 @@ img{
 
 .photu{
   position: absolute;
-  right: 5%;
-  bottom: 5%;
+  width: 100%;
+  text-align: center;
+  bottom: 7%;
+  right: 0;
 }
 
 .label{
   position: relative;
   top: 5%;
   height: 70%;
-  margin-right: 5%;
+  text-align: center;
 }
 
 .label .content{
   position: relative;
   width: 70%;
   height: 100%;
-  margin-top: 5%;
-  left: 10%;
+  margin: auto;
 }
 
 .footer{
@@ -102,11 +111,28 @@ img{
   bottom: 1em;
   width: 100%;
   text-align: center;
+  right: 0;
+}
+
+#background-image {
+  background-image: url('/images/bg19.jpg');
+  width: 100%;
+  top: 0;
+  left: 0;
+  height:100%; 
+  opacity: 0.3;
+  position: fixed;
+  background-repeat: repeat;
+  background-size: 20% auto;
+  padding: 0;
+  margin: 0;
+  z-index:0;
 }
 
 @media only screen and (max-width: 768px) {
   .photu{
-    height: 35%;
+    height: 15%;
+    bottom: 10%;
   }
 
   .label{
@@ -123,6 +149,10 @@ img{
 
   p{
     font-size: 9vmin;
+  }
+
+  #background-image{
+    background-size: 50% auto;
   }
 }
 
