@@ -64,7 +64,7 @@ html{
 
 p{
   font-family: 'poiret_oneregular', cursive;
-  font-size: 3.5em;
+  font-size: 2.5em;
   color: #cc0000;
   font-weight: bold;
 }
@@ -88,8 +88,9 @@ img{
   position: absolute;
   width: 100%;
   text-align: center;
-  bottom: 7%;
+  bottom: 10%;
   right: 0;
+  animation:move 0.9s infinite ease-in-out;
 }
 
 .label{
@@ -129,10 +130,21 @@ img{
   z-index:0;
 }
 
+@keyframes move{
+0%{
+ transform: scale(1) rotate(0deg);
+}
+  100%{
+   transform: scale(1.2) rotate(0.1deg);
+
+  }
+
+}
+
 @media only screen and (max-width: 768px) {
   .photu{
-    height: 15%;
-    bottom: 10%;
+    height: 10%;
+    bottom: 8%;
   }
 
   .label{
@@ -148,7 +160,7 @@ img{
   }
 
   p{
-    font-size: 9vmin;
+    font-size: 7vmin;
   }
 
   #background-image{
