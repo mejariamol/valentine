@@ -1,23 +1,7 @@
 @font-face {
-    font-family: 'alfa_slab_oneregular';
-    src: url('alfaslabone-regular-webfont.woff2') format('woff2'),
-         url('alfaslabone-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'poiret_oneregular';
-    src: url('poiretone-regular-webfont.woff2') format('woff2'),
-         url('poiretone-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'dancing_scriptregular';
-    src: url('dancingscript-regular-webfont.woff2') format('woff2'),
-         url('dancingscript-regular-webfont.woff') format('woff');
+    font-family: 'Handlee';
+    src: url('Handlee-Regular.woff2') format('woff2'),
+        url('Handlee-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -71,16 +55,17 @@ html{
 }
 
 p{
-  font-family: 'alfa_slab_oneregular', cursive;
+  font-family: 'Handlee', cursive;
   font-size: 2.5em;
-  color: #bf815c;
+  color: #cc0000;
+  font-weight: bold;
 }
 
 span{
-  font-family: 'alfa_slab_oneregular', cursive;
+  font-family: 'Handlee', cursive;
 }
 
-img{
+img.vector{
   height: 15em;
 }
 
@@ -92,10 +77,10 @@ img{
 }
 
 .photu{
-  position: absolute;
+  position: relative;
   width: 100%;
   text-align: center;
-  bottom: 10%;
+  top: 10%;
   right: 0;
 }
 
@@ -121,20 +106,19 @@ img{
   right: 0;
 }
 
-#background-image {
-  background-image: url('/images/bg19.jpg');
+.watermark {
+  background-image: url('/images/bg23.jpeg');
   width: 100%;
   top: 0;
   left: 0;
-  height:100%; 
+  height:100%;
   opacity: 0.3;
-  position: fixed;
+  position: absolute;
   background-repeat: repeat;
   background-size: 20% auto;
   padding: 0;
   margin: 0;
   z-index:0;
-  display: none;
 }
 
 /* Zoom in out animation */
@@ -155,7 +139,6 @@ img{
 @media only screen and (max-width: 768px) {
   .photu{
     height: 40%;
-    bottom: 8%;
   }
 
   .label{
@@ -179,7 +162,7 @@ img{
     font-size: 3.5vmin;
   }
 
-  #background-image{
+  .watermark{
     background-size: 50% auto;
   }
 }

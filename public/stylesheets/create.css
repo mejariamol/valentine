@@ -78,6 +78,22 @@ button.btn:active {
     transform: scale(0.96);
 }
 
+/* background palette button */
+#palette{
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+}
+
+#palette:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#palette:active{
+    transform: scale(0.96);
+}
+
 #swipe_left:hover,#swipe_right:hover {
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
     cursor: pointer;

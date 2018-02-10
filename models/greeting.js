@@ -25,6 +25,11 @@ var greetingSchema = new Schema({
     required: true,
     trim: true
   },
+  bg_path: {
+    type: String,
+    required: true,
+    default: 'bg23.jpeg'
+  },
   created_at: {
     type: Date,
     default: Date.now()
@@ -34,14 +39,3 @@ var greetingSchema = new Schema({
 var Greeting = mongoose.model('Greeting', greetingSchema)
 
 module.exports = Greeting
-
-module.exports.days = [
-  "Rose",
-  "Propose",
-  "Chocolate",
-  "Teddy",
-  "Promise",
-  "Hug",
-  "Kiss",
-  "Valentine's"
-]

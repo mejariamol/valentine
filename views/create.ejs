@@ -10,20 +10,25 @@
 <body>
 
 <div class="preview">
+  <div class="watermark" style="background-image: url('/images/<%= bg_path %>')"></div>
   <div class="photu">
-    <img src="/images/teddy.gif" />
+    <img class="vector" src="/images/bee-couple.png" />
   </div>
 
   <div class="label">
-    <p>Dear <span em-bind="to_first_name"><%= to_first_name %></span> <span em-bind="to_last_name"><%= to_last_name %></span></p><br>
-    <p><span em-bind="message"><%= message %></span></p><br>
-    <p>yours</p>
-    <p><span em-bind="from_first_name"><%= from_first_name %></span> <span em-bind="from_last_name"><%= from_last_name %></span></p>
+    <div class="content">
+      <p>Dear <span em-bind="to_first_name"><%= to_first_name %></span> <span em-bind="to_last_name"><%= to_last_name %></span></p><br>
+      <p><span em-bind="message"><%= message %></span></p><br>
+      <p>yours</p>
+      <p><span em-bind="from_first_name"><%= from_first_name %></span> <span em-bind="from_last_name"><%= from_last_name %></span></p>
+    </div>
   </div>
 
   <div class="footer">
     <p style="font-size: 1.2em;">&copy;LoveYouPats 2018</p>
   </div>
+
+  <div id="palette"><img src="/images/ic_palette_black.png"/></div>
 </div>
 
 <div class="form" id="greetingForm">
@@ -55,6 +60,7 @@
 
 <script src="/javascripts/jquery-3.3.1.min.js"></script>
 <script src="/javascripts/bind.js"></script>
+<script src="/javascripts/watermark.js"></script>
 <script src="/javascripts/create.js"></script>
 </body>
 </html>

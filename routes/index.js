@@ -6,18 +6,13 @@ var Greeting = require('../models/greeting')
 /* Front End */
 
 router.get('/', (req, res, next) => {
-  /*let now = new Date().getDate()
-  let dayName
-  if (now < 7) dayName = Greeting.days[0]
-  else if (now > 14) dayName = Greeting.days[6]
-  else dayName = Greeting.days[now-7]*/
-
   res.render('create', {
     to_first_name: "Juliet",
     to_last_name: "",
     from_first_name: "Romeo",
     from_last_name: "",
-    message: "It's Teddy Bear Day and I wanna say I am 'beary' lucky to have you in my life. Happy Teddy Bear Day!"
+    bg_path: "bg23.jpeg",
+    message: "Love is a promise, love is a Souvenir, once given, never forgotten, never let it disappear. Happy Promise Day!"
   })
 })
 
@@ -31,6 +26,7 @@ router.get('/:_id', (req, res, next) => {
       to_last_name: greeting.to_last_name,
       from_first_name: greeting.from_first_name,
       from_last_name: greeting.from_last_name,
+      bg_path: greeting.bg_path,
       message: greeting.message
     })
   })

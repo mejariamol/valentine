@@ -22,7 +22,8 @@ $(document).ready(() => {
             to_last_name: $('#toLastName').val(),
             message: $('#message').val(),
             from_first_name: $('#fromFirstName').val(),
-            from_last_name: $('#fromLastName').val()
+            from_last_name: $('#fromLastName').val(),
+            bg_path: bgs[bg]
         }
 
         $.post('/api/greetings', greeting, (res, status) => {
