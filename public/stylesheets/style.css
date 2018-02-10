@@ -1,4 +1,12 @@
 @font-face {
+    font-family: 'alfa_slab_oneregular';
+    src: url('alfaslabone-regular-webfont.woff2') format('woff2'),
+         url('alfaslabone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'poiret_oneregular';
     src: url('poiretone-regular-webfont.woff2') format('woff2'),
          url('poiretone-regular-webfont.woff') format('woff');
@@ -63,18 +71,17 @@ html{
 }
 
 p{
-  font-family: 'poiret_oneregular', cursive;
+  font-family: 'alfa_slab_oneregular', cursive;
   font-size: 2.5em;
-  color: #cc0000;
-  font-weight: bold;
+  color: #bf815c;
 }
 
 span{
-  font-family: 'poiret_oneregular', cursive;
+  font-family: 'alfa_slab_oneregular', cursive;
 }
 
 img{
-  height: 5em;
+  height: 15em;
 }
 
 .greeting{
@@ -90,14 +97,13 @@ img{
   text-align: center;
   bottom: 10%;
   right: 0;
-  animation:move 0.9s infinite ease-in-out;
 }
 
 .label{
   position: relative;
-  top: 5%;
+  top: 10%;
   height: 70%;
-  text-align: center;
+  padding-left: 5%;
 }
 
 .label .content{
@@ -128,9 +134,14 @@ img{
   padding: 0;
   margin: 0;
   z-index:0;
+  display: none;
 }
 
-@keyframes move{
+/* Zoom in out animation */
+
+/* animation:move 0.9s infinite ease-in-out; */
+
+/*@keyframes move{
 0%{
  transform: scale(1) rotate(0deg);
 }
@@ -139,16 +150,17 @@ img{
 
   }
 
-}
+} */
 
 @media only screen and (max-width: 768px) {
   .photu{
-    height: 10%;
+    height: 40%;
     bottom: 8%;
   }
 
   .label{
     margin-right: 0;
+    padding-left: 0;
   }
 
   .label .content{
@@ -160,7 +172,11 @@ img{
   }
 
   p{
-    font-size: 7vmin;
+    font-size: 5vmin;
+  }
+
+  .footer{
+    font-size: 3.5vmin;
   }
 
   #background-image{

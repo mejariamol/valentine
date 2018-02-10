@@ -6,13 +6,12 @@
   <link rel='stylesheet' href='/stylesheets/create.css' />
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="/javascripts/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 
 <div class="preview">
   <div class="photu">
-    <img src="/images/bg21.png" />
+    <img src="/images/teddy.gif" />
   </div>
 
   <div class="label">
@@ -34,7 +33,7 @@
     <input id="toLastName" type="text" em-model="to_last_name" value="<%= to_last_name %>"/><br>
 
     <label for="message">* Enter your message here:</label>
-    <input id="message" type="text" maxlength="150" em-model="message" value="<%= message %>"/><br>
+    <input id="message" type="text" maxlength="200" em-model="message" value="<%= message %>"/><br>
     
     <label for="fromFirstName">* Enter your name here:</label>
     <input id="fromFirstName" type="text" em-model="from_first_name" value="<%= from_first_name%>"/><br>
@@ -49,9 +48,12 @@
     <button class="btn" id="btnCopy">Copy the Greeting URL</button>
     <button class="btn" id="btnView">View Greeting</button>
   </div>
-
 </div>
 
+<div id="swipe_left"><img src="/images/ic_left.png"/></div>
+<div id="swipe_right"><img src="/images/ic_right.png"/></div>
+
+<script src="/javascripts/jquery-3.3.1.min.js"></script>
 <script src="/javascripts/bind.js"></script>
 <script src="/javascripts/create.js"></script>
 </body>

@@ -22,7 +22,7 @@ form{
 
 #result{
     position: relative;
-    top: 20%;
+    top: 10%;
 }
 
 label{
@@ -78,10 +78,39 @@ button.btn:active {
     transform: scale(0.96);
 }
 
+#swipe_left:hover,#swipe_right:hover {
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#swipe_left:active,#swipe_right:active{
+    transform: scale(0.96);
+}
+
+#swipe_left,#swipe_right{
+    display: none;
+    position: absolute;
+    top: 50%;
+}
+
+#swipe_left{
+    right: 0;
+    color: #cc0000;
+}
+
+#swipe_right{
+    left:0;
+}
+
 @media only screen and (max-width: 768px) {
+
+    #swipe_right{
+        display: block;
+    }
   
   .preview{
-      display: none;
+      width: 0;
   }
 
   .form{
