@@ -42,6 +42,7 @@ router.post('/', (req, res, next) => {
     from_first_name: req.body.from_first_name,
     from_last_name: req.body.from_last_name,
     bg_path: req.body.bg_path,
+    bg_color: req.body.bg_color,
     message: req.body.message
   }, (err, greeting) => {
     if (err)

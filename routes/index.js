@@ -7,12 +7,13 @@ var Greeting = require('../models/greeting')
 
 router.get('/', (req, res, next) => {
   res.render('create', {
-    to_first_name: "Juliet",
+    to_first_name: "Shirodkar",
     to_last_name: "",
-    from_first_name: "Romeo",
+    from_first_name: "Joshi",
     from_last_name: "",
-    bg_path: "bg23.jpeg",
-    message: "Love is a promise, love is a Souvenir, once given, never forgotten, never let it disappear. Happy Promise Day!"
+    bg_path: "bg28.jpeg",
+    bg_color: "#16a085",
+    message: "No matter where you are, I will always find my way to hug you tight and shower you with my kisses. I Love You! Happy Hug Day."
   })
 })
 
@@ -27,6 +28,7 @@ router.get('/:_id', (req, res, next) => {
       from_first_name: greeting.from_first_name,
       from_last_name: greeting.from_last_name,
       bg_path: greeting.bg_path,
+      bg_color: greeting.bg_color,
       message: greeting.message
     })
   })

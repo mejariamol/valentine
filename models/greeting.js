@@ -30,6 +30,11 @@ var greetingSchema = new Schema({
     required: true,
     default: 'bg23.jpeg'
   },
+  bg_color: {
+    type: String,
+    required: true,
+    default: '#16a085'
+  },
   created_at: {
     type: Date,
     default: Date.now()
