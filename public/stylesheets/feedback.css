@@ -48,7 +48,7 @@ li{list-style:none}
 
 /* Selected state of the stars */
 .rating-stars ul > li.star.selected > i.fa {
-  color:#cc0000;
+  color:#2c3e50;
 }
 
 
@@ -63,7 +63,7 @@ li{list-style:none}
   position: fixed;
   height: 100%;
   width: 100%;
-  background-color: #cc0000
+  background-color: #2c3e50
 }
 
 #footer{
@@ -95,8 +95,8 @@ li{list-style:none}
 button.btn {
     display: table;
     color: #fff;
-    background: #cc0000;
-    border: 1px solid #cc0000;
+    background: #34495e;
+    border: 0.5vmin solid #34495e;
     border-radius: 2em;
     font-size: 1.5em;
     margin: 0 auto;
@@ -108,7 +108,7 @@ button.btn {
 }
 
 button.btn:hover {
-    background: #cc0000;
+    background: #2c3e50;
     box-shadow: 0 5px 12px rgba(204, 0, 0, 0.2);
     cursor: pointer;
     transform: scale(1.05);
@@ -122,8 +122,8 @@ input {
     width: 60%;
     display: table;
     background: transparent;
-    color: rgba(204, 0, 0, 0.6);
-    border: 1px solid rgba(204, 0, 0, 0.6);
+    color: rgba(52, 73, 94, 0.6);
+    border: 0.5vmin solid rgba(52, 73, 94, 0.6);
     border-radius: 2em;
     font-size: 1.5em;
     font-weight: 300;
@@ -134,8 +134,8 @@ input {
 }
 
 input:hover, input:focus {
-    color: #cc0000;
-    border: 1px solid #cc0000;
+    color: #2c3e50;
+    border: 0.5vmin solid #2c3e50;
     transition: all .2s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
@@ -153,6 +153,6 @@ input:hover, input:focus {
     }
 
     #footer{
-        color: #cc0000;
+        color: #34495e;
     }
 }

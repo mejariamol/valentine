@@ -16,6 +16,10 @@ $(document).ready(() => {
             console.log('Bad Request')
             return
         }
+        if (/Juliet/.test($('#toFirstName').val().trim()) || /Romeo/.test($('#fromFirstName').val().trim())) {
+            console.log('Bad Request')
+            return
+        }
 
         var greeting = {
             to_first_name: $('#toFirstName').val(),

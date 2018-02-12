@@ -7,13 +7,13 @@ var Greeting = require('../models/greeting')
 
 router.get('/', (req, res, next) => {
   res.render('create', {
-    to_first_name: "Shirodkar",
+    to_first_name: "Juliet",
     to_last_name: "",
-    from_first_name: "Joshi",
+    from_first_name: "Romeo",
     from_last_name: "",
     bg_path: "bg28.jpeg",
-    bg_color: "#16a085",
-    message: "No matter where you are, I will always find my way to hug you tight and shower you with my kisses. I Love You! Happy Hug Day."
+    bg_color: "#ff7675",
+    message: "Damn, I Really want to KISS YOU! Happy Kiss Day!"
   })
 })
 

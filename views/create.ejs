@@ -6,6 +6,12 @@
   <link rel='stylesheet' href='/stylesheets/create.css' />
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Online Greetings Website" />
+  <meta property="og:title" content="Dear <%= to_first_name %> <%= to_last_name + '...' %>" />
+  <meta property="og:description" content="yours <%= from_first_name %> <%= from_last_name %>" />
+  <meta property="og:image" content="/images/bee-couple.png" />
+  <meta property=”og:url” content=”http://loveyoupats.com/" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 </head>
 <body>
 
@@ -13,7 +19,7 @@
   <!--div class="watermark" style="background-image: url('/images/<%= bg_path %>')"></div-->
   <div class="board" style="background-color:<%= bg_color %>;"></div>
   <div class="photu">
-    <img class="vector" src="/images/hug.gif" />
+    <img class="vector" src="/images/kiss.gif" />
   </div>
 
   <div class="label">
