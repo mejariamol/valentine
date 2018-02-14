@@ -7,13 +7,14 @@ var Greeting = require('../models/greeting')
 
 router.get('/', (req, res, next) => {
   res.render('create', {
-    to_first_name: "Juliet",
+    to_first_name: "",
     to_last_name: "",
-    from_first_name: "Romeo",
+    from_first_name: "",
     from_last_name: "",
-    bg_path: "bg28.jpeg",
+    bg_path: "bg35.jpg",
+    photu_path: "/images/heart.gif",
     bg_color: "#ff7675",
-    message: "Damn, I Really want to KISS YOU! Happy Kiss Day!"
+    message: "Sometimes, its not about being together... Its about being there for each other. Happy Valentine's Day!"
   })
 })
 
@@ -28,6 +29,7 @@ router.get('/:_id', (req, res, next) => {
       from_first_name: greeting.from_first_name,
       from_last_name: greeting.from_last_name,
       bg_path: greeting.bg_path,
+      photu_path: greeting.photu_path,
       bg_color: greeting.bg_color,
       message: greeting.message
     })

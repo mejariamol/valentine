@@ -10,11 +10,12 @@
     "cookie-parser": "~1.4.3",
     "cors": "*",
     "debug": "~2.6.9",
+    "ejs": "*",
     "express": "~4.15.5",
+    "express-fileupload": "^0.4.0",
+    "method-override": "*",
     "mongoose": "*",
     "morgan": "~1.9.0",
-    "ejs": "*",
-    "serve-favicon": "~2.4.5",
-    "method-override": "*"
+    "serve-favicon": "~2.4.5"
   }
 }

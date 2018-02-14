@@ -80,18 +80,22 @@ button.btn:active {
 }
 
 /* background palette button */
-#palette{
+#bg-tools{
     position: absolute;
     left: 5%;
     bottom: 5%;
 }
 
-#palette:hover{
+.bg-tool{
+    display: inline-block;
+}
+
+#insert-watermark:hover,#palette:hover{
     cursor: pointer;
     transform: scale(1.05);
 }
 
-#palette:active{
+#insert-watermark:active,#palette:active{
     transform: scale(0.96);
 }
 
@@ -134,6 +138,6 @@ button.btn:active {
   }
 
   form{
-      top: 5%;
+      top: 7%;
   }
 }

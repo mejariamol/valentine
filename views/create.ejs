@@ -14,13 +14,21 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-
+<div class="image-editor">
 <div class="preview">
-  <!--div class="watermark" style="background-image: url('/images/<%= bg_path %>')"></div-->
+  <div class="watermark" style="background-image: url('/images/<%= bg_path %>')"></div>
   <div class="board" style="background-color:<%= bg_color %>;"></div>
-  <div class="photu">
-    <img class="vector" src="/images/kiss.gif" />
-  </div>
+
+<div class="photu">
+   <div class="cropit-preview">
+     <img class="full-width" src="/images/heart.gif"/>
+   </div>
+   <!--input type="range" class="cropit-image-zoom-input"-->
+ </div>
+
+ <div class="right-bottom">
+   <img class="full-height" src="/images/kiss.png"/>
+ </div>
 
   <div class="label">
     <div class="content">
@@ -35,21 +43,27 @@
     <p style="font-size: 1.2em;">&copy;LoveYouPats 2018</p>
   </div>
 
-  <div id="palette"><img src="/images/ic_palette_black.png"/></div>
+  <div id="bg-tools">
+    <!--div class="bg-tool" id="palette"><img src="/images/ic_palette_black.png"/></div-->
+    <div class="bg-tool" id="insert-watermark"><img src="/images/ic_palette_black.png"/></div>
+  </div>
 </div>
 
 <div class="form" id="greetingForm">
   <form id="creator">
     <label for="toFirstName">* Enter your partner's name here:</label>
-    <input id="toFirstName" type="text" em-model="to_first_name" value="<%= to_first_name %>"/><br>
-    <input id="toLastName" type="text" em-model="to_last_name" value="<%= to_last_name %>"/><br>
+    <input id="toFirstName" type="text" em-model="to_first_name" placeholder="first name"/><br>
+    <input id="toLastName" type="text" em-model="to_last_name" placeholder="last name"/><br>
 
     <label for="message">* Enter your message here:</label>
     <input id="message" type="text" maxlength="200" em-model="message" value="<%= message %>"/><br>
     
     <label for="fromFirstName">* Enter your name here:</label>
-    <input id="fromFirstName" type="text" em-model="from_first_name" value="<%= from_first_name%>"/><br>
-    <input id="fromLastName" type="text" em-model="from_last_name" value="<%= from_last_name %>"/><br>
+    <input id="fromFirstName" type="text" em-model="from_first_name" placeholder="first name"/><br>
+    <input id="fromLastName" type="text" em-model="from_last_name" placeholder="last name"/><br>
+
+    <!--label for="photuFile">* Upload your photo you want to show on greeting (Optional):</label>
+		<input id="photuFile" type="file" class="cropit-image-input"><br-->
 
     <button class="btn" id="btnSubmit">Create your Greeting</button>
   </form>
@@ -65,9 +79,12 @@
 <div id="swipe_left"><img src="/images/ic_left.png"/></div>
 <div id="swipe_right"><img src="/images/ic_right.png"/></div>
 
-<script src="/javascripts/jquery-3.3.1.min.js"></script>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="/javascripts/bind.js"></script>
 <script src="/javascripts/watermark.js"></script>
 <script src="/javascripts/create.js"></script>
+<!--script src="/javascripts/cropit.js"></script-->
 </body>
 </html>

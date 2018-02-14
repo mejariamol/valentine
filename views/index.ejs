@@ -10,11 +10,24 @@
   <meta property="og:image" content="/images/bee-couple.png" />
 </head>
 <body>
-<!--div class="watermark" style="background-image:url('/images/<%= bg_path %>')"></div-->
+<div class="image-editor">
+<div class="watermark" style="background-image:url('/images/<%= bg_path %>')"></div>
 <div class="board" style="background-color:<%= bg_color %>;"></div>
 <div class="greeting">
+
+  <!--div class="photu">
+   <div class="cropit-preview"><img class="full-width" src="<%= photu_path %>"/></div>
+  </div-->
+
   <div class="photu">
-    <img class="vector" src="/images/kiss.gif" />
+    <div class="cropit-preview">
+      <img class="full-width" src="/images/heart.gif"/>
+    </div>
+    <!--input type="range" class="cropit-image-zoom-input"-->
+  </div>
+
+  <div class="right-bottom">
+    <img class="full-height" src="/images/kiss.png"/>
   </div>
 
   <div class="label">
@@ -33,6 +46,8 @@
     <p style="font-size: 1.2em;">&copy;LoveYouPats 2018</p>
   </div>
 </div>
-
+</div>
+<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="/javascripts/cropit.js"></script-->
 </body>
 </html>

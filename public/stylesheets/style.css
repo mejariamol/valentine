@@ -57,7 +57,7 @@ html{
 p{
   font-family: 'Handlee', cursive;
   font-size: 2em;
-  color: #fff;
+  color: #c0392b;
   font-weight: bold;
 }
 
@@ -80,15 +80,47 @@ img.vector{
 
 .photu{
   position: relative;
-  width: 100%;
-  text-align: center;
-  top: 10%;
+  width: 17em;
+  height: 12em;
+  top: 5%;
+  margin: auto;
+}
+
+.right-bottom {
+  position: absolute;
   right: 0;
+  bottom: 0;
+  height: 35%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+  position: relative;
+  bottom: 20%;
+}
+
+.cropit-preview {
+  background-color: #f8f8f8;
+  background-size: cover;
+  width: 17em;
+  height: 12em;
+  margin: auto;
+  border: 2px solid #505050;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.cropit-preview-image-container {
+  cursor: move;
 }
 
 .label{
   position: relative;
-  top: 17%;
+  top: 10%;
   height: 70%;
   padding-left: 5%;
 }
@@ -108,8 +140,7 @@ img.vector{
   right: 0;
 }
 
-/*.watermark {
-  background-image: url('/images/bg33.jpeg');
+.watermark {
   width: 100%;
   top: 0;
   left: 0;
@@ -121,7 +152,7 @@ img.vector{
   padding: 0;
   margin: 0;
   z-index:0;
-}*/
+}
 
 .board{
   width: 100%;
@@ -132,6 +163,7 @@ img.vector{
   padding: 0;
   margin: 0;
   z-index:0;
+  display: none;
 }
 
 /* Zoom in out animation */
@@ -150,17 +182,13 @@ img.vector{
 } */
 
 @media only screen and (max-width: 768px) {
-  .photu{
-    height: 30%;
-  }
-
   .label{
     margin-right: 0;
     padding-left: 0;
   }
 
   .label .content{
-    width: 85%;
+    width: 80%;
   }
 
   img.vector{

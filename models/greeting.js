@@ -30,6 +30,11 @@ var greetingSchema = new Schema({
     required: true,
     default: 'bg23.jpeg'
   },
+  photu_path: {
+    type: String,
+    required: true,
+    default: '/images/heart.gif'
+  },
   bg_color: {
     type: String,
     required: true,
